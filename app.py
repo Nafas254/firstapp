@@ -67,6 +67,24 @@ fig2 = plt.figure(figsize=(18,10))
 plt.plot(x,y,'or')
 st.pyplot(fig2)
 
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://www.coverstyl.com/cache/articles_160/o6-solid-light-blue2_1024_1024_1.webp");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
+
+
+     
 
 
 
