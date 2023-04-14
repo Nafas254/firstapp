@@ -22,8 +22,43 @@ st.title('La mia prima App in python')
 if st.button('Streamlit Button', help="Click here"):
     st.write('Hai cliccato')
 
-from PIL import Image
+
  
 if st.checkbox('Check Box'):
     st.write('checckata')
+
+from PIL import Image
+image = Image.open('mare.jpg')
+st.image(image, caption='Mare mare!!!',width=860)
+
+lang = st.radio(
+    "What's your favorite programming language?",
+    ('C++', 'Python'))
+if lang == 'C++':
+    st.write('You selected C++.')
+else:
+    st.write('You selected Python')
+
+x1 = st.slider('Please inserisci lato1 rettangolo', 0, 100, 25)
+x2 = st.slider('Please inserisci lato2 rettangolo', 0, 100, 35)
+
+def area(l1:float,l2:float):
+    a = l1*l2
+    return a 
+
+st.write("l'area rettangolo è ", area(x1,x2))
+
+add_selectbox = st.sidebar.radio(
+    "Please choose an option",
+    ("Option 1", "Option 2", "Option 3")
+)
+
+import matplotlib.pyplot as plt 
+from numpy.random import rand
+
+fig = plt.figure(figsize=(18,10)) 
+plt.scatter([1,2,3,4,5],[1,2,3,4,5])
+st.pyplot(fig)
+ 
+ 
 
