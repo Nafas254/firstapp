@@ -59,6 +59,18 @@ from numpy.random import rand
 fig = plt.figure(figsize=(18,10)) 
 plt.scatter([1,2,3,4,5],[1,2,3,4,5])
 st.pyplot(fig)
+
+rn = st.slider('Please inserisci il numero dei punti da visualizzare', 0, 100, 88)
+x = rand(rn)
+y = rand(rn)
+fig2 = plt.figure(figsize=(18,10)) 
+plt.plot(x,y,'or')
+st.pyplot(fig2)
+
+
+
+
  
+
  
 
